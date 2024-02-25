@@ -5,7 +5,7 @@ export default function Home() {
   return (
    <main>
     <h1 className="text-4xl">HELLO</h1>
-    <Button>HEYY</Button>
+    <Button>WELCOME TO COLLAB-E</Button>
     </main>
   );
 }
