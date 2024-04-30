@@ -62,6 +62,15 @@ export default async function Home({searchParams} : SearchParamProps)
           totalPages={events?.totalPages}
         />
     </section>
+
+    <iframe
+        src="https://www.chatbase.co/chatbot-iframe/PG4uEHhNLypySmElNSpsd"
+        title="Chatbot"
+        width="100%"
+        style={{ height: "100%", minHeight: "700px" }}
+        frameBorder="0"
+      ></iframe>
+      
     </>
   );
 }
