@@ -66,7 +66,7 @@ export default async function Home({searchParams} : SearchParamProps)
         dangerouslySetInnerHTML={{
           __html: `
             window.embeddedChatbotConfig = {
-              chatbotId: "yWHlf6xVZeBLqVwd5d2N0",
+              chatbotId: "nqRWHUJn2rWDvAHW5mFOi",
               domain: "www.chatbase.co"
             };
           `
