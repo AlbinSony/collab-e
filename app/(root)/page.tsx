@@ -66,13 +66,14 @@ export default async function Home({searchParams} : SearchParamProps)
         dangerouslySetInnerHTML={{
           __html: `
             window.embeddedChatbotConfig = {
-              chatbotId: "nqRWHUJn2rWDvAHW5mFOi",
-              domain: "www.chatbase.co"
+              chatbotId: "MKgXRKaK6IL7jBeMJ4P0u",
+              domain: "www.chatbase.co",
             };
-          `
+          `,
         }}
         defer
       />
+
       <script
         src="https://www.chatbase.co/embed.min.js"
         defer
