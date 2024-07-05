@@ -62,22 +62,20 @@ export default async function Home({searchParams} : SearchParamProps)
           totalPages={events?.totalPages}
         />
     </section>
-    <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.embeddedChatbotConfig = {
-              chatbotId: "MKgXRKaK6IL7jBeMJ4P0u",
-              domain: "www.chatbase.co",
-            };
-          `,
-        }}
-        defer
-      />
+<script>
+window.embeddedChatbotConfig = {
+  chatbotId: "kFhAklwqg8V9R5cyZKiqM",
+  domain: "www.chatbase.co"
+};
+</script>
 
-      <script
-        src="https://www.chatbase.co/embed.min.js"
-        defer
-      />
+<script
+  src="https://www.chatbase.co/embed.min.js"
+  chatbotId="kFhAklwqg8V9R5cyZKiqM"
+  domain="www.chatbase.co"
+  defer>
+</script>
+
     </>
   );
 }
