@@ -62,19 +62,19 @@ export default async function Home({searchParams} : SearchParamProps)
           totalPages={events?.totalPages}
         />
     </section>
-<script>
-window.embeddedChatbotConfig = {
-  chatbotId: "kFhAklwqg8V9R5cyZKiqM",
-  domain: "www.chatbase.co"
-};
-</script>
+    <script>
+      window.embeddedChatbotConfig = {
+      chatbotId: "kFhAklwqg8V9R5cyZKiqM",
+      domain: "www.chatbase.co"
+    };
+    </script>
 
-<script
-  src="https://www.chatbase.co/embed.min.js"
-  chatbotId="kFhAklwqg8V9R5cyZKiqM"
-  domain="www.chatbase.co"
-  defer>
-</script>
+    <script
+      src="https://www.chatbase.co/embed.min.js"
+      chatbotId="kFhAklwqg8V9R5cyZKiqM"
+      domain="www.chatbase.co"
+      defer>
+    </script>
 
     </>
   );
