@@ -7,8 +7,7 @@ import { SearchParamProps } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function Home({searchParams} : SearchParamProps)
- {
+export default async function Home({ searchParams }: SearchParamProps) {
   const page = Number(searchParams?.page) || 1;
   const searchText = (searchParams?.query as string) || '';
   const category = (searchParams?.category as string) || '';
@@ -19,40 +18,40 @@ export default async function Home({searchParams} : SearchParamProps)
     page,
     limit: 6
   });
+
   return (
     <>
-    <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10" >
-      <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
-        <div className="flex flex-col justify-center gap-8">
-          <h1 className="h1-bold">Host, Connect, Celebrate: Your Events, Our Platform!</h1>
-          {/* <h4 className="h4-bold">An Exclusive Events Platform For KTU </h4> */}
-          <p className="p-regular-20 md:p-regular-24">Elevate university experiences with an exclusive platform tailored for events, hackathons, and memorable gatherings.</p>
-          <Button size="lg" asChild className="button w-full sm:w-fit">
-            <Link href="#events">
-              Explore Now
-            </Link>
-          </Button>
+      <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
+        <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
+          <div className="flex flex-col justify-center gap-8">
+            <h1 className="h1-bold">Host, Connect, Celebrate: Your Events, Our Platform!</h1>
+            <p className="p-regular-20 md:p-regular-24">Elevate university experiences with an exclusive platform tailored for events, hackathons, and memorable gatherings.</p>
+            <Button size="lg" asChild className="button w-full sm:w-fit">
+              <Link href="#events">
+                Explore Now
+              </Link>
+            </Button>
+          </div>
+          <Image
+            src="/assets/images/hero.png"
+            alt="hero image"
+            width={1000}
+            height={1000}
+            className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
+          />
         </div>
-        <Image 
-        src="/assets/images/hero.png"
-        alt="hero image"
-        width={1000}
-        height={1000}
-        className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
-        />
-      </div>
-    </section>
+      </section>
 
-    <section id="events" className="wrapper my-8 flex flex-col gap-8 md:gap-12">
-      <h2 className="h2-bold">
-        Trusted by <br /> Thousands of Events
-      </h2>
-      <div className="flex w-full flex-col gap-5 md:flex-row">
-        <Search />
-        <CategoryFilter />
-      </div>
+      <section id="events" className="wrapper my-8 flex flex-col gap-8 md:gap-12">
+        <h2 className="h2-bold">
+          Trusted by <br /> Thousands of Events
+        </h2>
+        <div className="flex w-full flex-col gap-5 md:flex-row">
+          <Search />
+          <CategoryFilter />
+        </div>
 
-      <Collection 
+        <Collection
           data={events?.data}
           emptyTitle="No Events Found"
           emptyStateSubtext="Come back later"
@@ -61,19 +60,21 @@ export default async function Home({searchParams} : SearchParamProps)
           page={page}
           totalPages={events?.totalPages}
         />
-    </section>
-       <script>
-       window.embeddedChatbotConfig = {
-       chatbotId: "kFhAklwqg8V9R5cyZKiqM",
-       domain: "www.chatbase.co"
-       }
-       </script>
-       <script
-       src="https://www.chatbase.co/embed.min.js"
-       chatbotId="kFhAklwqg8V9R5cyZKiqM"
-       domain="www.chatbase.co"
-       defer>
-       </script>
+      </section>
+
+      <script dangerouslySetInnerHTML={{ __html: `
+        window.embeddedChatbotConfig = {
+          chatbotId: "kFhAklwqg8V9R5cyZKiqM",
+          domain: "www.chatbase.co"
+        }
+      `}} />
+
+      <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="kFhAklwqg8V9R5cyZKiqM"
+        domain="www.chatbase.co"
+        defer
+      />
     </>
   );
 }
