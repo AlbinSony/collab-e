@@ -66,13 +66,11 @@ export default async function Home({ searchParams }: SearchParamProps) {
         window.embeddedChatbotConfig = {
           chatbotId: "kFhAklwqg8V9R5cyZKiqM",
           domain: "www.chatbase.co"
-        }
+        };
       `}} />
 
       <script
         src="https://www.chatbase.co/embed.min.js"
-        chatbotId="kFhAklwqg8V9R5cyZKiqM"
-        domain="www.chatbase.co"
         defer
       />
     </>
